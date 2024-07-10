@@ -49,12 +49,4 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j]
             j -= 1
             arr[j + 1] = key
-def spread(arg):
-    ret = []
-    for i in arg:
-        if isinstance(i, list):
-            ret.extend(i)
-        else:
-            ret.append(i)
-    return ret
 
