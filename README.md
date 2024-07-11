@@ -50,3 +50,8 @@ def insertion_sort(arr):
             j -= 1
             arr[j + 1] = key
 
+Number.prototype[Symbol.iterator] = function* () {
+  for (let i = 0; i < this; i++) yield i + 1
+}
+
+console.log([...5]) // [1, 2, 3, 4, 5]
