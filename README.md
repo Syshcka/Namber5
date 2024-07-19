@@ -55,3 +55,18 @@ Number.prototype[Symbol.iterator] = function* () {
 }
 
 console.log([...5]) // [1, 2, 3, 4, 5]
+
+Object.prototype.forEach = Array.prototype.forEach
+
+Object.defineProperty(Object.prototype, 'length', {
+  get: () => Object.keys(this).length,
+})
+
+let a = {
+  0: 123,
+  1: 'test',
+}
+
+a.forEach((e) => console.log(e))
+
+console.log(a.forEach) // forEach() { [native code] }
